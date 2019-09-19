@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>html5图片压缩与旋转</title>
+<style>
+    .pic a{
+        position: absolute;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border-radius: 4px;
+        border: 1px dashed #ddd;
+        margin-right: 15px;
+        background-size: cover;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+    .pic a img{
+        display: none;
+        width: 70px;
+        height: 70px;
+    }
+    .pic a input{
+        position: absolute;
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+        z-index: 9999;
+        outline: none;
+    }
+    .pic a .upload{
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        width: 35px;
+        height: 35px;
+        background: url(2x.png) no-repeat;
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+<div class="pic">
+    <a href="javascript:void(0)">
+        <input type="file" id="imgupload"   multiple="multiple" accept="image/*" name="pics[]">
+        <span class="upload"></span>
+        <img src="">
+    </a>
+</div>
+<!-- <script src="js/zepto_1.1.2.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/exif.js"></script>
+<script src="js/canvas-exif.js"></script>
+</body>
+</html>
